@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .tab-button {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background: none;
+            color: inherit;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .active-tab {
+            background-color: #2980b9;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active-tab" onclick="changeTab('login')">Login</button>
+            <button class="tab-button" onclick="changeTab('register')">Register</button>
+        </div>
+        <div class="content">
+            <div id="loginTab">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <button onclick="login()">Login</button>
+                </div>
+            </div>
+            <div id="registerTab" style="display: none;">
+                <h2>Register</h2>
+                <div class="form-group">
+                    <label for="registerName">Name:</label>
+                    <input type="text" id="registerName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Phone:</label>
+                    <input type="password" id="registerPassword" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <button onclick="register()">Register</button>
+                </div>
+            </div>
+            <a href="index.html" class="w3-bar-item w3-button w3-circle w3-hover-opacity w3-grey"
+            style="font-size: 20px; text-decoration: none; position: fixed; bottom: 20px; right: 20px;">BACK HOME</a>
+        </div>
+    </div>
+
+    <script>
+        function changeTab(tabName) {
+            document.getElementById('loginTab').style.display = tabName === 'login' ? 'block' : 'none';
+            document.getElementById('registerTab').style.display = tabName === 'register' ? 'block' : 'none';
+            document.querySelector('.tab-button.active-tab').classList.remove('active-tab');
+            document.querySelector(`.tab-button:contains(${tabName})`).classList.add('active-tab');
+        }
+
+        function login() {
+            // Add login logic here
+            alert('Login button clicked!');
+        }
+
+        function register() {
+            // Add register logic here
+            alert('Register button clicked!');
+        }
+    </script>
+</body>
+
+</html>

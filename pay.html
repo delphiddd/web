@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 500px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .box h1 {
+            margin-bottom: 20px;
+        }
+        .box button {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .back-btn {
+            font-size: 10px;
+            text-decoration: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Choose Payment Method</h1>
+            <button onclick="payWithCreditCard()">Credit Card</button>
+            <button onclick="payWithPayPal()">PayPal</button>
+            <button onclick="payWithMobileBanking()">Mobile Banking</button>
+            <button onclick="paycash()">Cash</button>
+        </div>
+    </div>
+    <a href="index.html" class="back-btn w3-bar-item w3-button w3-circle w3-hover-opacity w3-grey">BACK HOME</a>
+</body>
+</html>
